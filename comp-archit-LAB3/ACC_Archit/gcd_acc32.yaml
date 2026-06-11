@@ -1,0 +1,12 @@
+limit: 1000
+memory_size: 512
+memory_mapped_io:
+  0x80: [56, 98]  # Input 
+  0x84: []        # Output
+reports:
+  - name: Execution Trace
+    slice: all
+    view: "{pc:dec}: {instruction} | Acc: {Acc:dec}\n"
+  - name: Final Result
+    slice: last
+    view: "Greatest Common Divisor (GCD): {Acc:dec}"

@@ -1,0 +1,12 @@
+limit: 1000
+memory_size: 8192
+memory_mapped_io:
+  0x80: ['H', 'e', 'l', 'l', 'o', '\n']
+  0x84: []
+
+reports:
+  - name: "Final Memory State"
+    slice: last
+    view: |
+      Buffer (0x00-0x05): {memory:0x00:0x05:hex}
+      IO 0x84: {io:0x84:hex}

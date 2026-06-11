@@ -1,0 +1,2 @@
+PULL DOCKER IMAGE & MOUNT VOLUMED: docker run -it --rm -v $(pwd):/lab3 -w /lab3 ryukzak/wrench:latest bash
+2- Run Wrech : wrench CODE.s --isa NAME_OF_ISA --conf CONF.yaml

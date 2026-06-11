@@ -1,0 +1,12 @@
+limit: 10000
+memory_size: 8192
+memory_mapped_io:
+  0x80: ['H', 'e', 'l', 'l', 'o', '!', '\n']
+  0x84: []
+
+reports:
+  - name: "Encoded Result at 0x00"
+    slice: last
+    view: |
+      Memory[0x00-0x0F]: {memory:0x00:0x0F}
+      Status at 0x84: {io:0x84:hex}

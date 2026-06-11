@@ -1,0 +1,15 @@
+limit: 1000
+memory_size: 1024
+
+memory_mapped_io:
+  0x80: [5]    # Input 'n' 
+  0x84: []     # Output 'count'
+
+reports:
+  - name: "Execution Trace"
+    slice: ["head", 20]
+    view: "{pc:dec}: {instruction} | Stack: {stack:dec} | R: {R:dec}\n"
+
+  - name: "Final Result"
+    slice: last
+    view: "The number of zeros in the binary representation is : {io:0x84:dec}"
