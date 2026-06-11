@@ -1,0 +1,12 @@
+limit: 2000           
+memory_size: 4096 
+
+memory_mapped_io:
+  0x80: [2, 0, 0, 3, -1]   # N = 2 -> (x1=0, y1=0) and (x2=3, y2=-1)
+  0x84: []                 
+
+reports:
+  - name: "Final Result"
+    slice: last
+    view: |
+      numio[0x84]: {io:0x84:dec}
